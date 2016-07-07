@@ -1,0 +1,225 @@
+$green : #6cb994
+$grey : #4d4d4d
+$light-grey : #808080
+$very-light-grey : #eeeeee
+
+
+*
+  margin: 0
+  padding: 0
+
+body
+  width: 100%
+  margin: 0
+  padding: 0
+
+// Typography
+h1
+  margin-top: 0
+  margin-bottom: 0
+  font-size: 42px
+  font-weight: 600
+  line-height: 50px
+  font-family: 'Raleway', sans-serif
+  color: $grey
+h3
+  margin-top: 0
+  margin-bottom: 0
+  font-family: 'Raleway', sans-serif
+  color: $grey
+
+h4
+  margin-top: 0
+  margin-bottom: 0
+  font-family: 'Raleway', sans-serif
+  color: $grey
+
+
+.uppercase
+  text-transform: uppercase
+
+p
+  font-family: 'Muli', sans-serif
+  font-size: 16px
+  line-height: 27px
+  color: $grey
+
+a
+  font-family: 'Muli', sans-serif
+  font-size: 16px
+  line-height: 27px
+
+// Miscellaneous
+.no-padding
+  padding: 0
+
+.no-margin
+  margin: 0
+
+.divider
+  display: block
+  width: 60px
+  height: 2px
+  margin: 30px 0
+  background-color: $green
+.divider-center
+  margin: 30px auto
+
+.fat-divider
+  display: block
+  width: 60px
+  height: 4px
+  margin: 30px auto
+  background-color: $green
+
+.row-divider
+  display: block
+  padding: 60px 15px
+  .line
+    display: block
+    position: relative
+    width: 90%
+    height: 1px
+    margin: 0 auto
+    top: 54px
+    background-color: #959595
+  .divider-image
+    img
+      display: block
+      position: relative
+      margin: 0 auto
+      padding: 20px
+      background-color: #ffffff
+
+
+.button-border
+  display: inline-block
+  padding: 15px 25px
+  color: $green
+  background: none
+  text-transform: uppercase
+  border: 1px solid $green
+  border-radius: 4px
+.button-border:hover
+  text-decoration: none
+
+.button-full
+  display: inline-block
+  margin-top: 100px
+  padding: 15px 25px
+  color: #ffffff
+  text-transform: uppercase
+  background-color: $green
+  border-radius: 4px
+
+.middle-wrap
+  display: table
+  width: 100%
+  height: 100%
+.middle
+  display: table-cell
+  vertical-align: middle
+
+
+@import "parts/nav"
+@import "parts/slider"
+@import "parts/portfolio"
+@import "parts/about"
+@import "parts/contact"
+@import "parts/news"
+@import "parts/footer"
+@import "parts/responsive"
+
+#intro-header
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  overflow: hidden
+  .header-image
+    height: 100%
+    .head-image
+      height: 100%
+
+.header-content
+  position: absolute
+  width: 100%
+  top: 0
+  left: 0
+  text-align: center
+  .header-text
+    height: 100%
+    .header-title
+      text-transform: uppercase
+      color: $grey
+    .header-subtitle
+      text-transform: uppercase
+      color: $grey
+
+
+.content
+  position: relative
+  z-index: 100
+
+  .top-angle
+    border-top-width: 0
+    border-right-width: 0
+    border-bottom-width: 200px
+    position: relative
+    width: 0
+    height: 0
+    border-color: transparent rgba(255, 255, 255, 0.3)
+    border-style: solid solid solid dashed
+    z-index: 100
+
+  .slider-dots
+    position: absolute
+    top: -60px
+
+  .content-angle
+    border-top-width: 290px
+    border-right-width: 0
+    border-bottom-width: 0
+    border-color: transparent #ffffff
+    width: 0
+    height: 0
+    border-style: solid solid solid dashed
+
+  .content-wrapper
+    background-color: #ffffff
+
+    .container
+      position: relative
+      top: -60px
+
+    .content-text
+      .read-more
+        margin-top: 50px
+
+    .content-image
+      position: relative
+      top: -60px
+      .image-wrap
+        padding: 0 0 0 200px
+
+
+    .service
+      margin-top: 100px
+      h3
+        margin-top: 50px
+        margin-bottom: 40px
+      .services-image
+        img
+          width: 150px
+    //.service:nth-child(1)
+    //  margin-top: 0
+    //.service:nth-child(2)
+    //  margin-top: 0
+
+  .project-image
+    margin-top: 100px
+
+
+
+
+
