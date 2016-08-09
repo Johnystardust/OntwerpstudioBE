@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="col-md-6 col-xs-12 credits">
-                    <span>Gerealiseerd door <a href="#">OSB</a> & <a href="http://media-critics.nl">MEDIA-CRITICS</a></span>
+                    <span>Gerealiseerd door <a href="#">OSB</a> & <a href="http://timvanderslik.nl">TIMVANDERSLIK.NL</a></span>
                 </div>
             </div>
         </div>

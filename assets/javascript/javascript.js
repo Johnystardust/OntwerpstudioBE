@@ -9,6 +9,44 @@ $(document).ready(function(){
     $('#intro-header').height(windowHeight);
     $('.header-content').height(windowHeight);
 
+
+    /*
+     |-------------------------------------------------------------------------------------------------------------------
+     |   Set Mobile Device Classes.
+     |-------------------------------------------------------------------------------------------------------------------
+     */
+    var deviceAgent = navigator.userAgent.toLowerCase();
+    var html        = $('html');
+
+    if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
+        html.addClass('ios');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/(Windows Phone)/i)) {
+        html.addClass('windows');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/(iemobile)/i)) {
+        html.addClass('iemobile');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/android/)) {
+        html.addClass('android');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/blackberry/)) {
+        html.addClass('blackberry');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/(symbianos|^sonyericsson|^nokia|^samsung|^lg)/)) {
+        html.addClass('mobile');
+    }
+
     /*
     |-----------------------------------------------------------------------------------------------------------------------
     |   Border Angle function
@@ -72,13 +110,18 @@ $(document).ready(function(){
     |   Menu Collapse function
     |-----------------------------------------------------------------------------------------------------------------------
     */
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 150) {
-            $('#nav').addClass('collapse-nav');
-        } else {
-            $('#nav').removeClass('collapse-nav');
-        }
-    });
+    if(!$('html').hasClass('mobile')){
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 150) {
+                $('#nav').addClass('collapse-nav');
+            } else {
+                $('#nav').removeClass('collapse-nav');
+            }
+        });
+    }
+    else {
+        $('#nav').addClass('collapse-nav');
+    }
 
     /*
     |-----------------------------------------------------------------------------------------------------------------------
@@ -86,7 +129,7 @@ $(document).ready(function(){
     |-----------------------------------------------------------------------------------------------------------------------
     */
     $('.menu-toggle').click(function(){
-        $('.main-menu').show();
+        $('#main-menu').toggleClass('menu-open');
         return false;
     });
 

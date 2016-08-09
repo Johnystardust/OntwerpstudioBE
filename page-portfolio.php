@@ -22,7 +22,7 @@ get_template_part('includes/partials/slider');
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row text-center">
                     <div class="col-md-12">
                         <ul class="portfolio-category-menu">
                             <li><a class="active-menu" href="#">Alles</a></li>
@@ -69,9 +69,7 @@ get_template_part('includes/partials/slider');
 
 
 
-                    <div class="col-md-12 text-center">
-                        <a class="button-full load-more" href="#">Laad meer</a>
-                    </div>
+                    <a class="button-full load-more" href="#">Laad meer</a>
 
                 </div>
             </div>
