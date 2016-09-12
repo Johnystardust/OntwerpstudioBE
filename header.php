@@ -23,11 +23,12 @@
 </head>
 
 <body>
-
     <div id="nav">
         <div class="container">
             <div class="logo-image">
-                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" alt="" width="230px"/>
+                <a href="<?php echo get_home_url(); ?>">
+                    <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" alt="" width="230px"/>
+                </a>
             </div>
 
             <div class="menu">
@@ -37,27 +38,34 @@
     </div>
 
     <div id="main-menu">
-        <?php
-        $args = array(
-            'theme_location'  => 'main-menu',
-            'menu'            => '',
-            'container'       => '',
-            'container_class' => '',
-            'container_id'    => '',
-            'menu_class'      => 'main-menu',
-            'menu_id'         => '',
-            'echo'            => true,
-            'fallback_cb'     => 'wp_page_menu',
-            'before'          => '',
-            'after'           => '',
-            'link_before'     => '',
-            'link_after'      => '',
-            'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-            'depth'           => 0,
-            'walker'          => ''
-        );
+        <a class="close-menu" href="#"><i class="icon icon-cancel"></i></a>
+        <div class="middle-wrap">
+            <div class="middle">
+                <div class="menu-ul-wrap">
+                    <?php
+                    $args = array(
+                        'theme_location'  => 'main-menu',
+                        'menu'            => '',
+                        'container'       => '',
+                        'container_class' => '',
+                        'container_id'    => '',
+                        'menu_class'      => 'main-menu',
+                        'menu_id'         => '',
+                        'echo'            => true,
+                        'fallback_cb'     => 'wp_page_menu',
+                        'before'          => '',
+                        'after'           => '',
+                        'link_before'     => '',
+                        'link_after'      => '',
+                        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'depth'           => 0,
+                        'walker'          => ''
+                    );
 
-        wp_nav_menu($args);
-        ?>
+                    wp_nav_menu($args);
+                    ?>
+                </div>
+            </div>
+        </div>
     </div>
 

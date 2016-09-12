@@ -110,7 +110,7 @@ $(document).ready(function(){
     |   Menu Collapse function
     |-----------------------------------------------------------------------------------------------------------------------
     */
-    if(!$('html').hasClass('mobile')){
+    //if(!$('html').hasClass('mobile')){
         $(window).scroll(function(){
             if ($(this).scrollTop() > 150) {
                 $('#nav').addClass('collapse-nav');
@@ -118,10 +118,10 @@ $(document).ready(function(){
                 $('#nav').removeClass('collapse-nav');
             }
         });
-    }
-    else {
-        $('#nav').addClass('collapse-nav');
-    }
+    //}
+    //else {
+    //    $('#nav').addClass('collapse-nav');
+    //}
 
     /*
     |-----------------------------------------------------------------------------------------------------------------------
@@ -133,5 +133,8 @@ $(document).ready(function(){
         return false;
     });
 
-
+    $('.close-menu').click(function(){
+        $('#main-menu').toggleClass('menu-open');
+        return false;
+    });
 });

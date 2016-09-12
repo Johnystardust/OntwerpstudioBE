@@ -41,7 +41,6 @@ add_action( 'admin_head', 'hide_editor' );
 function hide_editor() {
     remove_post_type_support('post', 'editor');
     remove_post_type_support('page', 'editor');
-
 }
 
 /*

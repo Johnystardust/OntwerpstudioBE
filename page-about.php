@@ -96,8 +96,6 @@ get_template_part('includes/partials/slider');
 
             <?php get_template_part('includes/partials/row-divider'); ?>
 
-
-
         </div>
     </div>
 
