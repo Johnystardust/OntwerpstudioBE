@@ -137,4 +137,17 @@ $(document).ready(function(){
         $('#main-menu').toggleClass('menu-open');
         return false;
     });
+
+
+    // Menu Effect Function
+    $('#main-menu').find('li').hover(function(){
+        // Get the text in the hover element
+        var html = $(this).find('a').html();
+
+        $('.menu-effect').find('.text').html(html);
+    }, function(){
+        var activeHtml = $('li.current_page_item').find('a').html();
+
+        $('.menu-effect').find('.text').html(activeHtml);
+    });
 });

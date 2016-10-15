@@ -5,10 +5,6 @@
  * Website:     http://media-critics.nl
  */
 
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
 
 /*
 |-----------------------------------------------------------------------------------------------------------------------
@@ -85,12 +81,10 @@ add_filter('acf', 'my_acf_load_value', 10, 3);
 |-----------------------------------------------------------------------------------------------------------------------
 */
 acf_add_options_page(array(
-
     'page_title'    => 'Slider',
     'menu_title'    => 'Slider',
     'menu_slug'     => 'slider',
     'capability'    => 'edit_posts',
     'icon_url'      => 'dashicons-slides',
     'position'      => 26
-
 ));
